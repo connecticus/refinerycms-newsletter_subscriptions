@@ -1,0 +1,77 @@
+pt-BR:
+  refinery:
+    plugins:
+      newsletter_subscriptions:
+        title: Newsletter Subscriptions
+        description: Gerenciar contatos
+    newsletter_subscriptions:
+      newsletter_subscriptions:
+        form:
+          send: Enviar mensagem
+          privacy_policy: "Nós valorizamos sua privacidade"
+      mailer:
+        notification:
+          greeting: Olá
+          you_recieved_new_newsletter_subscription: Você recebeu um novo contato pelo website.
+          newsletter_subscription_starts: --- começo da mensagem ---
+          newsletter_subscription_ends: --- fim da mensagem ---
+          from: De
+          email: Email
+          phone: Telefone
+          message: Mensagem
+          closing_line: Atenciosamente
+          ps: OBS. Todos os contatos são armazenados na seção 'Contatos' do website.
+    admin:
+      newsletter_subscriptions:
+        newsletter_subscriptions:
+          delete: Remover esta mensagem para sempre
+          newsletter_subscription:
+            read_newsletter_subscription: Ler a mensagem
+            mark_as_spam: Marcar como spam
+            mark_as_ham: Marcar como segura
+          actions:
+            inbox: Caixa de Entrada
+            spam: Spam
+            update_notified: Atualizar quem recebe a notificação
+            edit_confirmation_email: Editar email de confirmação
+          index:
+            no_newsletter_subscriptions: "Não exitem mensagens."
+          spam:
+            no_spam: Não existem mensagens de spam.
+          show:
+            details: Detalhes
+            age: Quando
+            actions: Ações
+            back_to_all_newsletter_subscriptions: Voltar para todas as Mensagens
+            spam: Spam
+            spam_yes: 'sim'
+            newsletter_subscription: Newsletter Subscription
+            to: Para
+            from: De
+            click_to_email: Clique para enviar email
+            phone: Telefone
+            date: Data
+            message: Mensagem
+        settings:
+          notification_email_recipients_form:
+            settings_value_name: Enviar notificações para
+            explanation: "Toda vez que alguém contactar você no seu website, enviamos um email para notificar a essa pessoa o recebimento de uma mensagem."
+            hint: "Digite um endereço de email acima. Deseja que a notificação vá para mais de uma pessoa? Digite vários endereços de email separados por vírgulas."
+            example: "Digite os endereços da seguinte forma: eu@dominio.com, amigo@msn.com, colegadetrabalho@trabalho.com"
+          confirmation_email_form:
+            to: Para
+            from: De
+            subject: Assunto
+            click_to_edit_subject: Clique aqui para editar o assunto
+            explanation: "Toda vez que alguém contatar você no seu website, enviamos um email para confirmar o recebimento da mensagem para esta pessoa."
+            below_edit_email_sent: Abaixo você pode editar o texto a ser enviado no e-mail.
+            the_customer_making_newsletter_subscription: O cliente fazendo o contato
+            message: Mensagem
+            note: "Nota: posicione o texto %name% onde você desejar que o nome do cliente apareça no email."
+  activerecord:
+    models:
+      refinery/newsletter_subscriptions/newsletter_subscription: Newsletter Subscription
+    attributes:
+      newsletter_subscription:
+        email: Email
+        subscribed: Subscribed

@@ -1,0 +1,12 @@
+<% if @grouped_newsletter_subscriptions.any? %>
+  <% @grouped_newsletter_subscriptions.each do |container| %>
+    <h3><%= l((newsletter_subscription_group = container.last).first.created_at, format: :short) %></h3>
+    <ul class="records">
+      <%= render partial: 'newsletter_subscription', collection: newsletter_subscription_group %>
+    </ul>
+  <% end %>
+<% else %>
+  <p>
+    <strong><%= t('no_newsletter_subscriptions', scope: 'refinery.admin.newsletter_subscriptions.newsletter_subscriptions.index') %></strong>
+  </p>
+<% end %>

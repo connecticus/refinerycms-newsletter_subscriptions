@@ -1,0 +1,14 @@
+<%= t('.greeting') %>,<br/>
+<br/>
+<%= t('.you_recieved_new_newsletter_subscription') %><br/>
+<br/>
+<%= t('.newsletter_subscription_starts') %><br/>
+<br/>
+<%= t('.email', default: t('activerecord.attributes.newsletter_subscription.email')) %>: <%= @newsletter_subscription.email %><br/>
+<br/>
+<%= t('.newsletter_subscription_ends') %><br/>
+<br/>
+<%= t('.closing_line') %>,<br/>
+<%= Refinery::Core.site_name %><br/>
+<br/>
+<%= t('.ps') %>

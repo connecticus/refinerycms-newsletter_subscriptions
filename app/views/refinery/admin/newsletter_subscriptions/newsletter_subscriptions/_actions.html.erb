@@ -1,0 +1,26 @@
+<ul>
+  <li <%= 'class="active"'.html_safe if action_name == 'index' %>>
+    <%= link_to refinery.admin_newsletter_subscriptions_newsletter_subscriptions_path,
+                class: 'icon-small icon-with-text email-icon' do %>
+      <%= t('.subscribed') %>
+      <i class="items-count"><%= "(#{subscribed_count})" if subscribed_count > 0 -%></i>
+    <% end -%>
+  </li>
+  <li <%= 'class="active"'.html_safe if action_name == 'unsubscribed' %>>
+    <%= link_to refinery.unsubscribed_admin_newsletter_subscriptions_newsletter_subscriptions_path,
+                class: 'icon-small icon-with-text folder-icon' do %>
+      <%= t('.unsubscribed') -%>
+      <i class="items-count"><%= "(#{unsubscribed_count})" if unsubscribed_count > 0 -%></i>
+    <% end %>
+  </li>
+  <li>
+    <%= link_to t('.update_notified'),
+                  refinery.edit_admin_newsletter_subscriptions_setting_path(:notification_email_recipients),
+                  class: 'icon-small icon-with-text setting-edit-icon' %>
+  </li>
+  <li>
+    <%= link_to t('.edit_confirmation_email'),
+                refinery.edit_admin_newsletter_subscriptions_setting_path(:confirmation_email),
+                class: 'icon-small icon-with-text setting-edit-icon' %>
+  </li>
+</ul>

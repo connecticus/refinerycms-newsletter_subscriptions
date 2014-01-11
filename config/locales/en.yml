@@ -1,0 +1,89 @@
+en:
+  refinery:
+    plugins:
+      newsletter_subscriptions:
+        title: Newsletter Subscriptions
+        description: Provides a contact form and stores newsletter subscriptions
+    newsletter_subscriptions:
+      newsletter_subscriptions:
+        form:
+          send: Subscribe
+          privacy_policy: We value your privacy
+          email_placeholder: Your e-mail address
+      mailer:
+        notification:
+          greeting: Hi there
+          you_recieved_new_newsletter_subscription: You just received a new newsletter subscription on your website.
+          newsletter_subscription_starts: --- newsletter subscription starts ---
+          newsletter_subscription_ends: --- newsletter subscription ends ---
+          from: From
+          email: Email
+          phone: Phone
+          message: Message
+          closing_line: Kind Regards
+          ps: P.S. All your newsletter subscriptions are stored in the "Newsletter Subscriptions" section of Refinery should you ever want to view it later there.
+    admin:
+      newsletter_subscriptions:
+        newsletter_subscriptions:
+          delete: Remove this newsletter subscription forever
+          newsletter_subscription:
+            detail: See detail of the newsletter subscription
+            mark_as_spam: Mark as spam
+            mark_as_ham: Move to inbox
+            mark_as_unsubscribed: Move to unsubscribed
+            mark_as_subscribed: Move to subscribed
+            subscribed: Subscribed
+            unsubscribed: Unsubscribed
+            ham: Ham
+            spam: Spam
+            subscribe: Subscribe
+          actions:
+            inbox: Inbox
+            spam: Spam
+            subscribed: Subscribed
+            unsubscribed: Unsubscribed
+            update_notified: Update who gets notified
+            edit_confirmation_email: Edit confirmation email
+          index:
+            no_newsletter_subscriptions: You have not received any newsletter subscriptions yet.
+          spam:
+            no_spam: Hooray! You don't have any spam.
+          subscribe:
+            no_subscribe: You have nothing in subscribe.
+          show:
+            details: Details
+            age: Age
+            actions: Actions
+            back_to_all_newsletter_subscriptions: Back to all newsletter subscriptions
+            spam: Spam
+            spam_yes: 'yes'
+            newsletter_subscription: Newsletter Subscription
+            to: To
+            from: From
+            click_to_email: Click to email this address
+            phone: Phone
+            date: Date
+            message: Message
+        settings:
+          notification_email_recipients_form:
+            settings_value_name: Send notifications to
+            explanation: Every time someone contacts you on your website, Refinery Sends out an email to say there is a new newsletter subscription.
+            hint: When a new newsletter subscription is submitted, Refinery will send an email notification to you.
+            example: "Enter your email address(es) like: jack@work.com, jill@office.com"
+          confirmation_email_form:
+            to: To
+            from: From
+            subject: Subject
+            click_to_edit_subject: Click here to edit the subject
+            explanation: Every time someone contacts you on your website, Refinery sends out an email to confirm the newsletter subscription with the person who made it.
+            below_edit_email_sent: Below you can edit the email that is sent out.
+            the_customer_making_newsletter_subscription: The customer making the newsletter subscription
+            message: Message
+            note: "Note: place the text %name% where you'd like the customer's name to appear in the email"
+  activerecord:
+    models:
+      refinery/newsletter_subscriptions/newsletter_subscription: Newsletter Subscription
+    attributes:
+      newsletter_subscription:
+        email: Email
+        subscribed: Subscribed

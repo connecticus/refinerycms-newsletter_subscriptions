@@ -1,0 +1,13 @@
+<%= form_for [refinery, :newsletter_subscriptions, @newsletter_subscription],
+              html: { data: { remote: true }} do |f| %>
+
+  <%= render '/refinery/admin/error_messages',
+             object: @newsletter_subscription,
+             include_object_name: true  %>
+
+  <div class="field email_field string_field">
+    <%= f.email_field :email, required: true, placeholder: t('.email_placeholder') %>
+    <%= f.submit t('.send') %>
+  </div>
+
+<% end %>

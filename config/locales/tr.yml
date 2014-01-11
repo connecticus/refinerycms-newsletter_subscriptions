@@ -1,0 +1,77 @@
+tr:
+  refinery:
+    plugins:
+      newsletter_subscriptions:
+        title: Newsletter Subscriptions
+        description: Iletisim formu ve kayitlarin temini newsletter subscriptions
+    newsletter_subscriptions:
+      newsletter_subscriptions:
+        form:
+          send: Mesaj Gonder
+          privacy_policy: Mahremiyetinize onem veriyoruz.
+      mailer:
+        notification:
+          greeting: Selamlar
+          you_recieved_new_newsletter_subscription: You just received a new newsletter subscription on your website.
+          newsletter_subscription_starts: --- newsletter subscription starts ---
+          newsletter_subscription_ends: --- newsletter subscription ends ---
+          from: Kimden
+          email: E-posta
+          phone: Telefon
+          message: Mesaj
+          closing_line: Saygilarimizla
+          ps: Senin butun newsletter subscriptions kayitli oldugu yer "Newsletter Subscriptions" burasidir eger ileride kullanmak istersen
+    admin:
+      newsletter_subscriptions:
+        newsletter_subscriptions:
+          delete: Sonsuza dek newsletter subscription sil
+          newsletter_subscription:
+            read_newsletter_subscription: Read the newsletter subscription
+            mark_as_spam: Spam olarak isaretle
+            mark_as_ham: Gelen kutusuna tasi
+          actions:
+            inbox: Gelen Kutusu
+            spam: Istenmeyen E-posta
+            update_notified: Uyari alanlari guncelle
+            edit_confirmation_email: Dogrulama e-posta'sini duzenle
+          index:
+            no_newsletter_subscriptions: Henuz  Herhangi bir  newsletter subscriptions almadiniz.
+          spam:
+            no_spam: Oley! Herhangi bir istenmeyen e-posta yok
+          show:
+            details: Detay
+            age: Yas
+            actions: Eylemler
+            back_to_all_newsletter_subscriptions: Geri don tum newsletter subscriptions
+            spam: Istenmeyen E-posta
+            spam_yes: 'evet'
+            newsletter_subscription: Newsletter Subscription
+            to: Kime
+            from: Kimden
+            click_to_email: Bu adrese e-posta'layin
+            phone: Telefon
+            date: Tarih
+            message: Mesaj
+        settings:
+          notification_email_recipients_form:
+            settings_value_name: Bildirimleri gonderecegin  adres
+            explanation: Her kim olursa seninle web sitesi uzerinden iletisime gecen, Refinery yeni bir newsletter subscription  diye e-posta atar.
+            hint: Yeni Bir newsletter subscription teslim edildiginde, Refinery bir e-posta bildirisi yollayacak sana.
+            example: "Lutfen e-posta adres(ler)inizi giriniz. Ornek olarak: jack@work.com, jill@office.com gibi "
+          confirmation_email_form:
+            to: Kime
+            from: Kimden
+            subject: Baslik
+            click_to_edit_subject: Basligi degistirmek icin buraya tiklayiniz
+            explanation: Her kim olursa seninle web siten uzerinden iletisime gecen,Refinery yeni bir dogrulama postasi gonderir newsletter subscription yapan kisiye
+            below_edit_email_sent: Asagida gonderilen e-postayi duzenleyebilirsin.
+            the_customer_making_newsletter_subscription: Musteri newsletter subscription yapiyor
+            message: Mesaj
+            note: "Not: metini hizala %name% nerede musterinizin e-posta adresi gibi gozukmesini istiyorsan"
+  activerecord:
+    models:
+      refinery/newsletter_subscriptions/newsletter_subscription: Newsletter Subscription
+    attributes:
+      newsletter_subscription:
+        email: Email
+        subscribed: Subscribed

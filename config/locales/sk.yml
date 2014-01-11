@@ -1,0 +1,78 @@
+sk:
+  refinery:
+    plugins:
+      newsletter_subscriptions:
+        title: Newsletter Subscriptions
+        description: Poskytuje kontaktný formulár a zaznamenáva newsletter subscriptions
+    newsletter_subscriptions:
+      newsletter_subscriptions:
+        form:
+          send: Prihlásiť
+          email_placeholder: Tvoj email
+          privacy_policy: Vážime si Vaše súkromie
+      mailer:
+        notification:
+          greeting: Ahoj
+          you_recieved_new_newsletter_subscription: Práve ste obdržali nový newsletter subscription na vašej webové stránke.
+          newsletter_subscription_starts: --- newsletter subscription začiatok ---
+          newsletter_subscription_ends: --- newsletter subscription koniec ---
+          from: Od
+          email: E-mail
+          phone: Telefón
+          message: Správa
+          closing_line: S pozdravom
+          ps: P.S. Všetky vaše newsletter subscriptions sú uložené v "Newsletter Subscriptions" sekcii v Refinery, ak by ste ich chceli zobraziť neskôr.
+    admin:
+      newsletter_subscriptions:
+        newsletter_subscriptions:
+          delete: Trvalo odstrániť newsletter subscription
+          newsletter_subscription:
+            read_newsletter_subscription: Prečítať newsletter subscription
+            mark_as_spam: Označiť ako spam
+            mark_as_ham: Označiť ako prečítané
+          actions:
+            inbox: Inbox
+            spam: Spam
+            update_notified: Upraviť zoznam notifikovaných
+            edit_confirmation_email: Upraviť potvrdzovací e-mail
+          index:
+            no_newsletter_subscriptions: Zatiaľ ste neobdržali žiadne newsletter subscriptions.
+          spam:
+            no_spam: Hurá! Nemáte žiaden spam.
+          show:
+            details: Podrobnosti
+            age: Vek
+            actions: Akcie
+            back_to_all_newsletter_subscriptions: Späť na všetky newsletter subscriptions
+            spam: Spam
+            spam_yes: 'áno'
+            newsletter_subscription: Newsletter Subscription
+            to: Komu
+            from: Od
+            click_to_email: Kliknite pre odoslanie tejto adresy e-mailom
+            phone: Telefón
+            date: Dátum
+            message: Správa
+        settings:
+          notification_email_recipients_form:
+            settings_value_name: Poslať upozornenie pre
+            explanation: Zakaždým, keď Vás niekto kontaktuje cez vaše webové stránky, Refinery odošle e-mail s upozornením na nový newsletter subscription.
+            hint: Keď je odoslaný nový newsletter subscription, Refinery odošle upozornenie na Váš e-mail.
+            example: "Zadajte e-mailovú adresu(y) ako: jack@work.com, jill@office.com"
+          confirmation_email_form:
+            to: Komu
+            from: Od
+            subject: Predmet
+            click_to_edit_subject: Kliknite tu ak chcete upraviť predmet
+            explanation: Zakaždým, keď Vás niekto kontaktuje cez vaše webové stránky, Refinery odošle e-mail s potvrdením o prijatí odosielateľovi newsletter subscription.
+            below_edit_email_sent: Nižšie môžete upraviť e-mail, ktorý je odosielaný.
+            the_customer_making_newsletter_subscription: Klient robiť newsletter subscription
+            message: Správa
+            note: "Poznámka: umiestniťe text %name%, pre určenie pozície mena klienta v e-maile"
+  activerecord:
+    models:
+      refinery/newsletter_subscriptions/newsletter_subscription: Newsletter Subscription
+    attributes:
+      newsletter_subscription:
+        email: Email
+        subscribed: Subscribed

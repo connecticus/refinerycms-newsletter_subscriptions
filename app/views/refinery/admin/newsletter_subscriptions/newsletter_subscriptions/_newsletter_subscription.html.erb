@@ -1,0 +1,21 @@
+<li class="record">
+  <div class="detail">
+    <span class="title">
+      <%= link_to newsletter_subscription.name, refinery.admin_newsletter_subscriptions_newsletter_subscription_path(newsletter_subscription) %>
+    </span>
+    <span class="preview"><%= strip_tags(sanitize(newsletter_subscription.message)) %></span>
+  </div>
+  <span class="actions">
+    <%= link_to t('delete', scope: 'refinery.admin.record'),
+                refinery.admin_newsletter_subscriptions_newsletter_subscription_path(newsletter_subscription),
+                class: 'delete confirm-delete nojs-hide icon-small delete-icon',
+                title: t('delete', scope: 'refinery.admin.newsletter_subscriptions.newsletter_subscriptions'),
+                data: {
+                  remote: true,
+                  confirm: t('message', scope: 'refinery.admin.delete', title: newsletter_subscription.email)
+                },
+                method: :delete %>
+
+    <%= render "#{action_name}_record_actions", newsletter_subscription: newsletter_subscription %>
+  </span>
+</li>
