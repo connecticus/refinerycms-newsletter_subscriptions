@@ -9,6 +9,7 @@ class CreateNewsletterSubscriptions < ActiveRecord::Migration
     end
 
     add_index :refinery_newsletter_subscriptions, :updated_at
+    add_index :refinery_newsletter_subscriptions, :email, unique: true
   end
 
   def down
