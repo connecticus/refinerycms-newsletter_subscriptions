@@ -3,7 +3,6 @@
     <span class="title">
       <%= link_to newsletter_subscription.name, refinery.admin_newsletter_subscriptions_newsletter_subscription_path(newsletter_subscription) %>
     </span>
-    <span class="preview"><%= strip_tags(sanitize(newsletter_subscription.message)) %></span>
   </div>
   <span class="actions">
     <%= link_to t('delete', scope: 'refinery.admin.record'),
