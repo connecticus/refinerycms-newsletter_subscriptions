@@ -69,6 +69,10 @@ sk:
             the_customer_making_newsletter_subscription: Klient robiť newsletter subscription
             message: Správa
             note: "Poznámka: umiestniťe text %name%, pre určenie pozície mena klienta v e-maile"
+    snippets:
+      newsletter_subscription:
+        note_before_form_html: '<p>Chcete dostávať e-mailom nové nahrávky Muzičky, informácie o koncertoch, tanečných domoch a zábavách kde Muzička hrá? Napíšte nám Vašu e-mailovú adresu!</p>'
+        note_after_form_html: '<p><em class="font-size-small">Podľa našich štatistík informácie, ktoré Vám zdieľame cez Facebook sa dostanú v najlepšom prípade k polovici naších priateľov!</em></p>'
   activerecord:
     models:
       refinery/newsletter_subscriptions/newsletter_subscription: Newsletter Subscription

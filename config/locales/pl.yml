@@ -1,4 +1,4 @@
-en:
+pl:
   refinery:
     plugins:
       newsletter_subscriptions:
@@ -82,8 +82,8 @@ en:
             note: "Note: place the text %name% where you'd like the customer's name to appear in the email"
     snippets:
       newsletter_subscription:
-        note_before_form_html: '<p>Would you like to receive e-mails with new recordings, information of concerts, houses of traditional dances and parties where Muzička participates? If so, please send us your e-mail address!</p>'
-        note_after_form_html: '<p><em class="font-size-small">According to our statistics, at the best, only half of our friends gets the information we share with you on Facebook!</em></p>'
+        note_before_form_html: '<p>Czy chcesz otrzymywać e-maile z nowymi nagraniami Muzicka firmy, informacje o koncertach w, domów tradycyjnych tańców i stron gdzie Muzička uczestniczy? Jeśli tak, to prosimy o przesłanie e-mail!</p>'
+        note_after_form_html: '<p><em class="font-size-small">Według naszych statystyk, w najlepszym razie tylko połowa naszych znajomych dostaje informację, że akcje z tobą na Facebooku!</em></p>'
   activerecord:
     models:
       refinery/newsletter_subscriptions/newsletter_subscription: Newsletter Subscription

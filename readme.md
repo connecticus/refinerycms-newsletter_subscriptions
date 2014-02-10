@@ -8,3 +8,7 @@
 
     # Sign up for a http://rubygems.org/ account and publish the gem
     gem push refinerycms-newsletter_subscriptions.gem
+
+# TODO
+
+Store locale on which user made subscription so we can work with it.

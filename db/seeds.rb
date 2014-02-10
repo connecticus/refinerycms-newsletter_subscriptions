@@ -64,4 +64,21 @@ if plugin
 
     setting.update_attributes(value: val) if setting.value.blank?
   end
+
+  if defined? Refinery::Snippets
+    require 'refinery/snippet'
+
+    newsletter_subscription_snippet = Refinery::Snippet.where(
+      title: 'Newsletter Subscription',
+      snippet_type: 'template',
+      canonical_friendly_id: 'newsletter-subscription'
+    ).first_or_initialize
+
+    Globalize.with_locales(Refinery::I18n.frontend_locales) do |locale|
+      newsletter_subscription_snippet.update_attributes(
+        body: '/refinery/snippets/newsletter_subscription',
+        title: newsletter_subscription_snippet.title
+      )
+    end
+  end
 end

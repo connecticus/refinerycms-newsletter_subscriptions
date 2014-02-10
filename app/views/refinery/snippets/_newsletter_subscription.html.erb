@@ -1,0 +1,4 @@
+<%= t('.note_before_form_html') %>
+<% @newsletter_subscription = Refinery::NewsletterSubscriptions::NewsletterSubscription.new %>
+<%= render 'refinery/newsletter_subscriptions/newsletter_subscriptions/form' %>
+<%= t('.note_after_form_html') %>
