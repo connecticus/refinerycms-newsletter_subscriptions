@@ -1,8 +1,17 @@
 ru:
+  email_placeholder: 'e-mail'
+  subscribed: "Подписанные"
+  unsubscribed: "Неподписанные"
+  update_notified: "Изменить получателей уведомлений"
+  edit_confirmation_email: "Редактировать письмо-подтверждение"
+  mark_as_unsubscribed: "В группу неподписанных"
+  no_newsletter_subscriptions: "Лист пуст"
+  delete: "Удалить"
+  unsubscribe: "Убрать из листа"
   refinery:
     plugins:
       newsletter_subscriptions:
-        title: Newsletter Subscriptions
+        title: "Newsletter Subscriptions"
     newsletter_subscriptions:
       newsletter_subscriptions:
         form:
@@ -16,7 +25,7 @@ ru:
             move_newsletter_subscription_to_open: "Переместить этот запрос в открытые"
             read_newsletter_subscription: "Прочитать запрос"
             remove_newsletter_subscription: "Вы уверены, что хотите удалить запрос от '%{name}'?"
-            title: Newsletter Subscriptions
+            title: "Newsletter Subscriptions"
             mark_as_spam: "Пометить как спам"
             mark_as_ham: "Переместить во Входящие"
           toggle_status:
@@ -25,7 +34,7 @@ ru:
           actions:
             inbox: "Входящие"
             spam: "Спам"
-            update_notified: Изменить получателей уведомлений
+            update_notified: "Изменить получателей уведомлений"
             edit_confirmation_email: "Редактировать письмо-подтверждение"
           index:
             no_newsletter_subscriptions: "Вы еще не получили ни одного запроса."
@@ -42,8 +51,8 @@ ru:
             back_to_all_newsletter_subscriptions: "Назад ко всем запросам"
             spam: "Спам"
             spam_yes: 'да'
-            newsletter_subscription: Newsletter Subscription
-            title: Newsletter Subscriptions
+            newsletter_subscription: "Управление подпиской"
+            title: "Подписки"
         settings:
           update:
             updated: "'%{setting}' были успешно обновлены."

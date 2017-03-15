@@ -9,7 +9,7 @@ module Refinery
       end
 
       def thank_you
-        @page = Page.includes(:parts).find_by(plugin_page_id: 'newsletter_subscriptions_thank_you')
+        @page = Page.find_by(link_url: Refinery::NewsletterSubscriptions.page_path_thank_you)
       end
 
       def new
@@ -41,12 +41,7 @@ module Refinery
     protected
 
       def find_page
-        @page = Page.includes(:parts).find_by(plugin_page_id: 'newsletter_subscriptions')
-      end
-      alias_method :page, :find_page
-
-      def thank_you_page
-        @thank_you_page ||= refinery_plugin.thank_you_page
+        #@page = Page.find_by(link_url: Refinery::NewsletterSubscriptions.page_path_new)
       end
 
     private
