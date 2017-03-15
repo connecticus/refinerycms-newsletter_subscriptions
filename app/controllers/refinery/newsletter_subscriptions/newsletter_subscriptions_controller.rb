@@ -9,7 +9,7 @@ module Refinery
       end
 
       def thank_you
-        @page = Page.find_by(link_url: Refinery::NewsletterSubscriptions.page_path_thank_you)
+        #@page = Page.find_by(link_url: Refinery::NewsletterSubscriptions.page_path_thank_you)
       end
 
       def new
